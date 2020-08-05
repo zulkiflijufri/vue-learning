@@ -6,6 +6,7 @@
         <h3 v-show="student.show">{{student.campus}}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteStudent">Delete student</button>
   </div>
 </template>
 
@@ -15,6 +16,11 @@ export default {
   data () {
     return {
 
+    }
+  },
+  methods: {
+    deleteStudent: function () {
+      this.students.pop()
     }
   }
 }
