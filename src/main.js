@@ -10,6 +10,9 @@ Vue.config.productionTip = false
 // Compenent global
 // Vue.component('students', Students)
 
+// event bus
+export const bus = new Vue();
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

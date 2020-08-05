@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { bus } from '../main';
+
 export default {
   props: {
   	title: {
@@ -18,8 +20,9 @@ export default {
   },
   methods: {
   	changeTitle: function () {
-  		// this.title = 'Daeng Vue'
-  		this.$emit('changeTitle', 'DaengCode'); // event child to parent
+  		// this.$emit('changeTitle', 'DaengCode'); // event child to parent
+  		this.title = 'DaengCode'
+  		bus.$emit('titleChange', 'DaengCode'); // event bus
   	}
   }
 }
