@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { bus } from '../main';
+import { bus } from '../main'
 
 export default {
   props: {

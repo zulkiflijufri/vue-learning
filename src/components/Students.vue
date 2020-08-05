@@ -22,6 +22,25 @@ export default {
     deleteStudent: function () {
       this.students.pop()
     }
+  },
+  // lifecycle hooks
+  beforeCreate () {
+    alert('beforeCreate')
+  },
+  Create () {
+    alert('create')
+  },
+  beforeMount () {
+    alert('beforeMount')
+  },
+  mounted () {
+    alert('mounted')
+  },
+  beforeUpdate () {
+    alert('beforeUpdate')
+  },
+  updated () {
+    alert('updated')
   }
 }
 </script>

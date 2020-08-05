@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 // Vue.component('students', Students)
 
 // event bus
-export const bus = new Vue();
+export const bus = new Vue()
 
 /* eslint-disable no-new */
 new Vue({
