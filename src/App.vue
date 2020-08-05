@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header v-bind:title="title"/>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"/>
     <app-students v-bind:students="students"/>
     <app-footer v-bind:title="title"/>
   </div>
@@ -19,7 +19,7 @@ export default {
   },
   data () {
     return {
-       students: [
+      students: [
         {name: 'Zulkifli', campus: 'Nurul Fikri', show: false},
         {name: 'Kalsum', campus: 'Unhas', show: false},
         {name: 'Yunita', campus: 'UNM', show: false},
@@ -27,7 +27,13 @@ export default {
         {name: 'Faiz', campus: 'IPB', show: false},
         {name: 'Fakhri', campus: 'ITB', show: false}
       ],
-      title: "DaengCode"
+      // title: 'DaengCode'
+      title: 'VuejsCode'
+    }
+  },
+  methods: {
+    updateTitle: function (newTitle) {
+      this.title = newTitle
     }
   }
 }

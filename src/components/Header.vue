@@ -18,7 +18,8 @@ export default {
   },
   methods: {
   	changeTitle: function () {
-  		this.title = 'Daeng Vue'
+  		// this.title = 'Daeng Vue'
+  		this.$emit('changeTitle', 'DaengCode'); // event child to parent
   	}
   }
 }
