@@ -27,8 +27,8 @@ export default {
   beforeCreate () {
     alert('beforeCreate')
   },
-  Create () {
-    alert('create')
+  created () {
+    alert('created')
   },
   beforeMount () {
     alert('beforeMount')
