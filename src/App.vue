@@ -1,39 +1,39 @@
 <template>
   <div>
-    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"/>
-    <app-students v-bind:students="students"/>
-    <app-footer v-bind:title="title"/>
+    <form-helper>
+      <!-- <h3 slot="title">Slot title</h3>
+      <p slot="paragraph">Slot paragraph</p> -->
+      <div slot="form-header">
+        <h3>This is the title of the form</h3>
+        <p>this is the paragraph of the form</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="your name" required />
+        <input type="password" placeholder="password" required />
+      </div>
+      <div slot="form-control">
+        <button type="submit" v-on:click="handleSubmit">Submit</button>
+      </div>
+    </form-helper>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import Students from './components/Students.vue'
+import formHelper from './components/formHelper.vue'
+
 
 export default {
   components: {
-    'app-header': Header,
-    'app-footer': Footer,
-    'app-students': Students
+    'form-helper': formHelper
   },
   data () {
     return {
-      students: [
-        {name: 'Zulkifli', campus: 'Nurul Fikri', show: false},
-        {name: 'Kalsum', campus: 'Unhas', show: false},
-        {name: 'Yunita', campus: 'UNM', show: false},
-        {name: 'Wiwi', campus: 'UIN', show: false},
-        {name: 'Faiz', campus: 'IPB', show: false},
-        {name: 'Fakhri', campus: 'ITB', show: false}
-      ],
-      // title: 'DaengCode'
-      title: 'VuejsCode'
+
     }
   },
   methods: {
-    updateTitle: function (newTitle) {
-      this.title = newTitle
+    handleSubmit: () => {
+      alert('click')
     }
   }
 }
