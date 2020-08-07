@@ -1,5 +1,11 @@
 <template>
 	<div>
+    <!-- <slot></slot>
+    <h1>I am the form helper</h1> -->
+
+    <!-- <slot name="title" />
+    <h1>I am the form helper</h1>
+    <slot name="paragraph" /> -->
     <h1>Please fill out our form</h1>
     <form>
       <div id="form-header">
